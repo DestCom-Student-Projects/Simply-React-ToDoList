@@ -13,9 +13,12 @@ You can add, change the status and delete the status of the task.
 
 ## Installation
 
+At first do `npm install`,  
+then :
+
 ### Developement mode
 
-Simply do a `npm install` at the root of the project
+Simply do a `npm start` at the root of the project
 
 ### Production mode
 
