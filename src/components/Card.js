@@ -26,8 +26,10 @@ function Card({ card, setTask, index }) {
   }
 
   return (
-    <div className={"flex justify-around mb-2 text-left"}>
-      <div className="flex justify-start w-1/2">
+    <div
+      className={"flex flex-col lg:flex-row lg:justify-around mb-2 text-left"}
+    >
+      <div className="flex justify-start lg:w-1/2">
         <h3
           className={
             card.status === "do"
@@ -41,7 +43,7 @@ function Card({ card, setTask, index }) {
           {card.content}
         </p>
       </div>
-      <div className="flex justify-around w-1/2">
+      <div className="flex justify-around lg:w-1/2">
         {card.status === "todo" && (
           <div
             className="px-2 py-1 text-base font-semibold text-white bg-green-600 rounded-lg shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-purple-200 w-1/3 ml-2 text-center cursor-pointer"

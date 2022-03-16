@@ -29,7 +29,7 @@ function Form({ task, setTask }) {
   return (
     <>
       <form
-        className="flex flex-col w-1/2 max-h-1/2 justify-center"
+        className="flex flex-col lg:w-1/2 max-h-1/2 justify-center"
         onSubmit={(e) => handleSubmit(e)}
       >
         <h2 className="bg-transparent focus:outline-none focus:border-indigo-500 text-base m-auto w-9/12 text-center">

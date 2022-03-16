@@ -22,7 +22,7 @@ function App() {
   return (
     <div className="mx-auto flex flex-col min-h-screen w-full items-center justify-center bg-gray-900 text-white">
       <Header />
-      <div className="flex justify-around w-11/12">
+      <div className="flex flex-col lg:flex-row lg:justify-around w-11/12">
         <Form task={task} setTask={setTask} />
         <Todocontainer task={task} setTask={setTask} />
       </div>
