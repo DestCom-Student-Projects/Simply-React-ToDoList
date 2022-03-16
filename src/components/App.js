@@ -12,7 +12,7 @@ function App() {
   const [task, setTask] = useState(() => {
     const storageVal = window.localStorage.getItem("task");
     console.log(storageVal);
-    return storageVal.length !== null ? JSON.parse(storageVal) : sampleCard;
+    return storageVal !== null ? JSON.parse(storageVal) : sampleCard;
   });
 
   useEffect(() => {
