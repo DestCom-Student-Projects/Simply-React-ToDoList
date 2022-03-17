@@ -1,9 +1,19 @@
-function Card({ card, setTask, index }) {
+function Card({ task, card, setTask, index }) {
   function handleStatusChange(e, card) {
     e.preventDefault();
+
     if (card.status === "todo") {
       card.status = "do";
     } else {
+      const numberOfTasks = task.filter(
+        (task) => task.status === "todo"
+      ).length;
+      console.log(numberOfTasks);
+
+      if (numberOfTasks === 10) {
+        alert("Oh ! Vous feriez mieux de faire des tâches à faire !");
+        return;
+      }
       card.status = "todo";
     }
 
@@ -49,7 +59,7 @@ function Card({ card, setTask, index }) {
             className="px-2 py-1 text-base font-semibold text-white bg-green-600 rounded-lg shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-purple-200 w-1/3 ml-2 text-center cursor-pointer"
             onClick={(e) => handleStatusChange(e, card)}
           >
-            Mettre fait
+            Fait
           </div>
         )}
         {card.status === "do" && (

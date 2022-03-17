@@ -16,7 +16,13 @@ function Todocontainer({ task, setTask }) {
       {task.map((card, index) => (
         <>
           {card.status === "do" && (
-            <Card card={card} setTask={setTask} index={index} key={card.id} />
+            <Card
+              task={task}
+              card={card}
+              setTask={setTask}
+              index={index}
+              key={card.id}
+            />
           )}
         </>
       ))}

@@ -10,10 +10,14 @@ function Form({ task, setTask }) {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    /* //Update du localStorage
-    let taskTmp = task;
-    taskTmp.push(data);
-    window.localStorage.setItem("task", JSON.stringify(taskTmp)); */
+    // Get the number of tasks that not aleady done
+    const numberOfTasks = task.filter((task) => task.status === "todo").length;
+    console.log(numberOfTasks);
+
+    if (numberOfTasks === 10) {
+      alert("Oh ! Vous feriez mieux de faire des tâches à faire !");
+      return;
+    }
 
     //Update du state
     setTask((prevTask) => [...prevTask, data]);
